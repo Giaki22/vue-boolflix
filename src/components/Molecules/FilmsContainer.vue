@@ -1,23 +1,23 @@
 <template>
   <ul>
-      <li v-for="(film, i) in data.searchResults.results" :key="i">
-        <ResultCard :film="film"></ResultCard>
+      <li v-for="(film, i) in data.resultsFilms" :key="i">
+        <ResultFilmCard :film="film"></ResultFilmCard>
       </li>
   </ul>
 </template>
 
 <script>
 import data from '../../assets/shared/data.js'
-import ResultCard from '../Atoms/ResultCard.vue'
+import ResultFilmCard from '../Atoms/ResultFilmCard.vue'
 
 export default {
-name: 'FilmContainer',
+name: 'FilmsContainer',
     data() {
         return {
             data
         };
     },
-    components: { ResultCard }
+    components: { ResultFilmCard }
 }
 </script>
 

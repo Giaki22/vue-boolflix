@@ -1,13 +1,17 @@
 <template>
-    <FilmContainer></FilmContainer>
+    <main>
+        <FilmsContainer></FilmsContainer>
+        <SeriesContainer></SeriesContainer>
+    </main>
 </template>
 
 <script>
-import  FilmContainer from '../Moleules/FilmContainer.vue'
+import  FilmsContainer from '../Molecules/FilmsContainer.vue'
+import  SeriesContainer from '../Molecules/SeriesContainer.vue'
 
 export default {
 name: 'MainMain',
-components: { FilmContainer }
+components: { FilmsContainer, SeriesContainer }
 }
 </script>
 
