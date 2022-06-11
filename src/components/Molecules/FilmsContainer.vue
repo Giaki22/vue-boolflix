@@ -25,5 +25,8 @@ name: 'FilmsContainer',
 ul{
     list-style: none;
     display: flex;
+    li{
+        width: calc(100% / 6);
+    }
 }
 </style>
