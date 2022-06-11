@@ -9,7 +9,7 @@
           <h3>{{serie.original_name}}</h3>
           <LangFlag :iso="serie.original_language" v-if="(serie.original_language !== undefined)"></LangFlag>
           <div class="stars">
-              <h5>{{Math.ceil(serie.vote_average / 2)}}</h5>
+              <i class="fa-solid fa-star" v-for="i in Math.ceil(serie.vote_average / 2)" :key="i"></i>
           </div>
       </div>
   </main>
@@ -33,6 +33,14 @@ main{
         img{
             width: 100%;
             aspect-ratio: 9/16;
+        }
+    }
+    .stars{
+        display: flex;
+        flex-flow: row nowrap;
+        gap: 2px;
+        i{
+            color: rgb(213, 193, 12);
         }
     }
 }
