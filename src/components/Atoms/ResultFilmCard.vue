@@ -12,7 +12,7 @@
               <h5>Voto: </h5><i class="fa-solid fa-star" v-for="i in Math.ceil(film.vote_average / 2)" :key="i"></i>
           </div>
           <br>
-          <h5>Overview: {{film.overview}}</h5>
+          <h5 v-if="(film.overview !== '')">Overview: {{film.overview}}</h5>
       </div>
   </main>
 </template>
