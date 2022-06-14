@@ -1,9 +1,12 @@
 <template>
-  <ul>
-      <li v-for="(serie, i) in data.resultsSeries" :key="i">
-        <ResultSerieCard :serie="serie"></ResultSerieCard>
-      </li>
-  </ul>
+    <main>
+        <h2>SERIE TV</h2>
+        <ul>
+            <li v-for="(serie, i) in data.resultsSeries" :key="i">
+                <ResultSerieCard :serie="serie"></ResultSerieCard>
+            </li>
+        </ul>
+    </main>
 </template>
 
 <script>
@@ -22,11 +25,19 @@ name: 'SeriesContainer',
 </script>
 
 <style lang="scss" scoped>
-ul{
-    list-style: none;
-    display: flex;
-    li{
-        width: calc(100% / 6);
+main{
+    h2{
+        color: white;
+    }
+    ul{
+        list-style: none;
+        display: flex;
+        overflow: auto;
+        li{
+            width: calc(100% / 6);
+            display: flex;
+            flex-shrink: 0;
+        }
     }
 }
 </style>

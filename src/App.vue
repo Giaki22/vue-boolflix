@@ -20,5 +20,7 @@ export default {
 
 <style lang="scss">
 @import './assets/style/global-parts/reset';
-
+body{
+  background-color: rgb(25, 25, 25);
+}
 </style>

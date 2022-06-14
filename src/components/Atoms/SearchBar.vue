@@ -17,6 +17,8 @@ data() {
 }
 </script>
 
-<style>
-
+<style scoped>
+input{
+    line-height: 26px;
+}
 </style>

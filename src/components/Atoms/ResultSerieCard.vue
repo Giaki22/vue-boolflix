@@ -29,18 +29,28 @@ export default {
 
 <style lang="scss" scoped>
 main{
+    border: 1px solid rgb(150, 150, 150);
+    padding: 5px;
+    &_:hover{
+        .info{
+            display: block;
+        }
+    }
     .pic{
         img{
             width: 100%;
             aspect-ratio: 9/16;
         }
     }
-    .stars{
-        display: flex;
-        flex-flow: row nowrap;
-        gap: 2px;
-        i{
-            color: rgb(213, 193, 12);
+    .info{
+        display: none;
+        .stars{
+            display: flex;
+            flex-flow: row nowrap;
+            gap: 2px;
+            i{
+                color: rgb(213, 193, 12);
+            }
         }
     }
 }
