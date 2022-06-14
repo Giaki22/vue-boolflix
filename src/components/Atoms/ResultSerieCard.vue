@@ -33,7 +33,7 @@ main{
     border: 1px solid rgb(150, 150, 150);
     padding: 5px;
     position: relative;
-    &:hover{
+    :hover{
                 .info{
                     display: block;
                     position: absolute;
