@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main class="film-card">
       <div class="pic">
         <img :src="`https://image.tmdb.org/t/p/w780${film.poster_path}`" v-if="film.poster_path !== null">
         <img :src="`https://cdn1.iconfinder.com/data/icons/leto-files/64/leto_files-58-512.png`" v-if="film.poster_path == null">
@@ -30,11 +30,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-main{
+.film-card{
+    cursor: pointer;
     border: 1px solid rgb(150, 150, 150);
     padding: 5px;
     position: relative;
-    :hover{
+    &:hover{
                 .info{
                     display: block;
                     position: absolute;

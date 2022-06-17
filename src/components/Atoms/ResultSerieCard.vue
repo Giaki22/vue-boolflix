@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main class="serie-card">
       <div class="pic">
         <img :src="`https://image.tmdb.org/t/p/w780${serie.poster_path}`" v-if="serie.poster_path !== null">
         <img :src="`https://cdn1.iconfinder.com/data/icons/leto-files/64/leto_files-58-512.png`" v-if="serie.poster_path == null">
@@ -29,11 +29,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-main{
+.serie-card{
+    cursor: pointer;
     border: 1px solid rgb(150, 150, 150);
     padding: 5px;
     position: relative;
-    :hover{
+    &:hover{
                 .info{
                     display: block;
                     position: absolute;
